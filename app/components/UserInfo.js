@@ -2,7 +2,7 @@ import React from 'react'
 
 import UserRepos from './UserRepos'
 
-function UserInfo(props) {
+const UserInfo = (props) => {
   const userInfo = props.user ?
     (
       <div className="row">

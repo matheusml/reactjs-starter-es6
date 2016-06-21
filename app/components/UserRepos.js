@@ -13,7 +13,8 @@ class UserRepos extends React.Component{
   }
 
   render() {
-    const repos = this.props.repos.map((repo, key) => {
+    const { repos } = this.props;
+    const reposList = this.props.repos.map((repo, key) => {
       return (
         <div key={key} className="thumbnail">
           <div className="caption">
@@ -33,7 +34,7 @@ class UserRepos extends React.Component{
     return (
       <div>
         <h2>{this.state.reposCount} repositories</h2>
-        {repos}
+        {reposList}
       </div>
     )
   }

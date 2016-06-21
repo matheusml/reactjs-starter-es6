@@ -21806,7 +21806,7 @@
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	function UserInfo(props) {
+	var UserInfo = function UserInfo(props) {
 	  var userInfo = props.user ? _react2.default.createElement(
 	    'div',
 	    { className: 'row' },
@@ -21850,7 +21850,7 @@
 	  ) : null;
 
 	  return userInfo;
-	}
+	};
 
 	UserInfo.propTypes = {
 	  user: _react2.default.PropTypes.object,
@@ -21905,7 +21905,9 @@
 	  }, {
 	    key: "render",
 	    value: function render() {
-	      var repos = this.props.repos.map(function (repo, key) {
+	      var repos = this.props.repos;
+
+	      var reposList = this.props.repos.map(function (repo, key) {
 	        return _react2.default.createElement(
 	          "div",
 	          { key: key, className: "thumbnail" },
@@ -21957,7 +21959,7 @@
 	          this.state.reposCount,
 	          " repositories"
 	        ),
-	        repos
+	        reposList
 	      );
 	    }
 	  }]);
